@@ -38,7 +38,7 @@ function ingredients(randomMeal) {
     ingredientsList.innerHTML = createRandomIngredientsList(randomMeal);
     recipe.innerText = getRandomRecipe(randomMeal);
     video.onclick = () => {
-      videoReroute(randomMeal);
+      videoRandomReroute(randomMeal);
     };
     // Show the modal
     modal.style.display = "block";
@@ -66,7 +66,7 @@ function ingredients(randomMeal) {
     return randomMeal.strInstructions;
   }
   
-  function videoReroute(randomMeal) {
+  function videoRandomReroute(randomMeal) {
     window.location.href = randomMeal.strYoutube;
   }
   
