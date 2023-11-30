@@ -38,6 +38,7 @@ async function getMealCategory() {
       }
     } 
     else {
+      gridContainer.innerHTML = ""
       empty.innerHTML =
       "Not Found (please check the category entered again)";
       empty.style.display = "block"
