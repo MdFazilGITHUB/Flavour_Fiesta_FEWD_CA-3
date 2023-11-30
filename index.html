@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flavour Fiesta - Easy Meals</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/FoodLogo.png" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div id="logoImg">
+      <img src="./assets/FoodLogo.png" alt="" />
+    </div>
+    <div id="mainContainer">
+      <div class="flex">
+        <div class="intro">
+          <p>
+            Welcome to Flavour Fiesta, where we bring you a daily dose of
+            culinary inspiration. Each day, discover a new, simple, and
+            delicious food recommendation to add excitement to your meals. Join
+            us on this flavorful journey of easy and tasty surprises!
+          </p>
+        </div>
+      </div>
+
+      <div class="heading">
+        <h1>Today's Flavourful Pick</h1>
+      </div>
+
+      <div id="randomMeal">
+        <div id="randomMealBlock">
+          <h2 id="randomName"></h2>
+          <div id="randomMealImage">
+            <img src="" alt="" id="randomImage" onclick="ingredients()"/>
+          </div>
+        </div>
+      </div>
+      <div class="center">
+        <div id="search">
+          <h1>Browse through to find your desired culinary delights</h1>
+          <div id="searchBar">
+            <h1>Discover:</h1>
+            <input type="search" placeholder="Search Here" id="searchValue" />
+          </div>
+        </div>
+      </div>
+      <h2 id="empty"></h2>
+      <div id="flex">
+        <div id="gridContainer"></div>
+      </div>
+    </div>
+
+    
+    <div id="myModal" class="modal ">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <div id="box">
+          <h1 style="text-decoration: underline; font-family: 'Judson', serif;">Ingredients:</h1>
+          <ul id="ingredientsList">
+          </ul>
+          <h1 style="text-decoration: underline; font-family: 'Judson', serif; padding-top: 10px;"> Recipe Instructions:</h1>
+          <p id="recipe"></p>
+        </div>
+        <div class="center">
+          <button id="videoLink">Watch Video</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./app.js"></script>
+  <script src="./randomMeal.js"></script>
+</html>
