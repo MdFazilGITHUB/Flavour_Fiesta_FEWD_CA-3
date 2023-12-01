@@ -20,10 +20,10 @@ async function getMealCategory() {
     if (meals && meals.length > 0) {
       for (let i = 0; i < meals.length; i++) {
         // console.log("meals.strMeal: ", meals[i].strMeal);
-        card += `<div id="gridBlock" onclick="showIngredients('${meals[i].strMeal}')" >
-                <h2 id="name">${meals[i].strMeal}</h2>
+        card += `<div id="gridBlock" onclick="showIngredients('${meals[i].strMeal}')"  data-aos="fade-up" data-aos-duration="2000">
+                <h2 id="name" data-aos="fade-up">${meals[i].strMeal}</h2>
                 <div id="mealImage">
-                  <img src=${meals[i].strMealThumb}  alt="" id="image">
+                  <img src=${meals[i].strMealThumb}  alt="" id="image" data-aos="zoom-in" data-aos-duration="2000">
                 </div>
               </div>`;
       }

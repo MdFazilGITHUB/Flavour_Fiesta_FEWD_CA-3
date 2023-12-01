@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="./assets/FoodLogo.png" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
 
   <body>
@@ -14,8 +15,8 @@
       <img src="./assets/FoodLogo.png" alt="" />
     </div>
     <div id="mainContainer">
-      <div class="flex">
-        <div class="intro">
+      <div  class="flex">
+        <div  class="intro">
           <p>
             Welcome to Flavour Fiesta, where we bring you a daily dose of
             culinary inspiration. Each day, discover a new, simple, and
@@ -29,26 +30,26 @@
         <h1>Today's Flavourful Pick</h1>
       </div>
 
-      <div id="randomMeal">
+      <div  data-aos="fade-up" id="randomMeal" data-aos-duration="1000">
         <div id="randomMealBlock">
           <h2 id="randomName"></h2>
           <div id="randomMealImage">
-            <img src="" alt="" id="randomImage" onclick="ingredients()" />
+            <img src="" alt="" id="randomImage" onclick="ingredients()" data-aos="fade-down" data-aos-duration="2000" />
           </div>
         </div>
       </div>
-      <div class="center">
-        <div id="search">
-          <h1>Browse through to find your desired culinary delights</h1>
-          <div id="searchBar">
+      <div class="center" >
+        <div id="search" data-aos="fade-up" data-aos-duration="4000">
+          <h1 data-aos="fade-up" data-aos-duration="2000">Browse through to find your desired culinary delights</h1>
+          <div id="searchBar" data-aos="fade-up" data-aos-duration="2000">
             <h1>Discover:</h1>
-            <input type="search" placeholder="Search Here" id="searchValue" />
+            <input type="search" placeholder="Search Here" id="searchValue" data-aos="fade-down" data-aos-duration="3000"/>
           </div>
         </div>
       </div>
       <h2 id="empty"></h2>
       <div id="flex">
-        <div id="gridContainer"></div>
+        <div id="gridContainer" data-aos="fade-up"></div>
       </div>
       <footer>
         <div id="footerFlex">
@@ -106,7 +107,6 @@
                 </clipPath>
               </defs>
             </svg>
-
             <svg
               width="100"
               height="100"
@@ -124,7 +124,7 @@
       </footer>
     </div>
   </body>
-  <div id="myModal" class="modal">
+  <div id="myModal" class="modal" >
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
       <h2 id="modalTitle"></h2>
@@ -151,4 +151,8 @@
   </div>
   <script src="./app.js"></script>
   <script src="./randomMeal.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>

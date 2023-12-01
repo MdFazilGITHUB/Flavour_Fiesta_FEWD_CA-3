@@ -6,11 +6,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  user-select: none;
+  /* user-select: none;  */
 }
 
 body {
-  background-color: black;
+  background: linear-gradient(180deg, black,white);
 }
 
 body::-webkit-scrollbar {
@@ -49,7 +49,8 @@ body::-webkit-scrollbar {
 .intro {
   background-color: rgb(255, 255, 255);
   width: 50%;
-  border: 6px solid black;
+  border: 5px solid black;
+  border-radius: 20px;
   opacity: 0.78;
   padding: 10px;
 }
@@ -77,8 +78,9 @@ body::-webkit-scrollbar {
 }
 
 #randomMealBlock {
-  width: 25%;
+  width: 30%;
   height: 1%;
+  padding: 20px;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 64px;
   border: 6px solid #000;
@@ -87,7 +89,7 @@ body::-webkit-scrollbar {
 
 #randomMealBlock h2 {
   padding-top: 70px;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   font-family: "Italiana", sans-serif;
   text-align: center;
   font-size: 3em;
@@ -125,7 +127,7 @@ body::-webkit-scrollbar {
   background-color: rgba(0, 0, 0, 0.6);
   border: 6px solid white;
   border-radius: 19px;
-  margin-top: 100px;
+  margin-top: 200px;
   text-align: center;
   font-family: "Inria Serif", serif;
   font-size: 30px;
@@ -194,13 +196,12 @@ body::-webkit-scrollbar {
 }
 
 #gridBlock h2 {
-  /* background-color: #000; */
   padding-top: 30px;
-  text-decoration: underline;  
   font-family: "Italiana", sans-serif;
   text-align: center;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 900;
+  letter-spacing: 2px;
   color: white;
 }
 
@@ -245,13 +246,17 @@ body::-webkit-scrollbar {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  /* overflow: auto; */
   background-color: rgba(0, 0, 0, 0.7);
   overflow-y: none;
+  position: fixed;
 }
 
 .modal-content {
   background-size: 100%;
+  position: fixed;
+  top: -25%;
+  left: 10%;
   background-color: rgba(255, 255, 255, 0.7);
   margin: 15% auto;
   padding: 40px;
@@ -259,8 +264,6 @@ body::-webkit-scrollbar {
   border-radius: 40px;
   width: 80%;
   height: fit-content;
-  animation: transform 5s;
-  transition: 0.5s ease;
 }
 
 .close {
