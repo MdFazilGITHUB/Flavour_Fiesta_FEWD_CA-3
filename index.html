@@ -10,13 +10,27 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
 
-  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <title>Flavour Fiesta</title>
+</head>
+<body>
+    <!-- Logo Section -->
     <div id="logoImg">
       <img src="./assets/FoodLogo.png" alt="" />
     </div>
+
+    <!-- Main Content Section -->
     <div id="mainContainer">
-      <div  class="flex">
-        <div  class="intro">
+      
+      <!-- Introduction Section -->
+      <div class="flex">
+        <div class="intro">
           <p>
             Welcome to Flavour Fiesta, where we bring you a daily dose of
             culinary inspiration. Each day, discover a new, simple, and
@@ -26,11 +40,13 @@
         </div>
       </div>
 
+      <!-- Heading Section -->
       <div class="heading">
         <h1>Today's Flavourful Pick</h1>
       </div>
 
-      <div  data-aos="fade-up" id="randomMeal" data-aos-duration="1000">
+      <!-- Random Meal Section -->
+      <div data-aos="fade-up" id="randomMeal" data-aos-duration="1000">
         <div id="randomMealBlock">
           <h2 id="randomName"></h2>
           <div id="randomMealImage">
@@ -38,6 +54,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Search Section -->
       <div class="center" >
         <div id="search" data-aos="fade-up" data-aos-duration="4000">
           <h1 data-aos="fade-up" data-aos-duration="2000">Browse through to find your desired culinary delights</h1>
@@ -47,10 +65,16 @@
           </div>
         </div>
       </div>
+
+      <!-- Empty Section -->
       <h2 id="empty"></h2>
+
+      <!-- Grid Section -->
       <div id="flex">
         <div id="gridContainer" data-aos="fade-up"></div>
       </div>
+
+      <!-- Footer Section -->
       <footer>
         <div id="footerFlex">
           <div class="flex1">
@@ -61,6 +85,7 @@
             </div>
           </div>
           <div id="flex2">
+            <!-- Social Media Icons -->
             <svg
               width="100"
               height="100"
@@ -119,36 +144,40 @@
                 fill="white"
               />
             </svg>
+            </svg>
           </div>
         </div>
       </footer>
     </div>
-  </body>
-  <div id="myModal" class="modal" >
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2 id="modalTitle"></h2>
-      <div id="box">
-        <h1 style="text-decoration: underline; font-family: 'Judson', serif">
-          Ingredients:
-        </h1>
-        <ul id="ingredientsList"></ul>
-        <h1
-          style="
-            text-decoration: underline;
-            font-family: 'Judson', serif;
-            padding-top: 10px;
-          "
-        >
-          Recipe Instructions:
-        </h1>
-        <p id="recipe"></p>
-      </div>
-      <div class="center">
-        <button id="videoLink">Watch Video</button>
+
+    <!-- Modal Section -->
+    <div id="myModal" class="modal" >
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <div id="box">
+          <!-- Ingredients List Section -->
+          <h1 style="text-decoration: underline; font-family: 'Judson', serif">
+            Ingredients:
+          </h1>
+          <ul id="ingredientsList"></ul>
+          
+          <!-- Recipe Instructions Section -->
+          <h1 style="text-decoration: underline; font-family: 'Judson', serif; padding-top: 10px;">
+            Recipe Instructions:
+          </h1>
+          <p id="recipe"></p>
+        </div>
+        
+        <!-- Watch Video Button -->
+        <div class="center">
+          <button id="videoLink">Watch Video</button>
+        </div>
       </div>
     </div>
-  </div>
+</body>
+</html>
+
   <script src="./app.js"></script>
   <script src="./randomMeal.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
